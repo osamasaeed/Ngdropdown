@@ -1,0 +1,8 @@
+{
+    "name"              :"Ngdropdown",
+    "description"       :"My first plugin",
+    "namespace"         :"Ngdropdown",
+    "author"            :"osamasaeeda4@gmail.com",
+    "type"              :"template",
+    "serviceProvider"   :"Ngdropdown\\Providers\\NgdropdownServiceProvider"
+}
