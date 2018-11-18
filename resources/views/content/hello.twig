@@ -7,15 +7,16 @@
 <h1>plugin works</h1>
 <div ng-controller="mainCtrl">
 
-    <input type="text" ng-model="model" />
-    {{model}}
+    <input type="text" ng-model="name" />
+    <input type="text" ng-model="name" />
+
+   <p>{{name}}</p>
 
 </div>
 <script>
 var app = angular.module('Ngdropdown',[]);
 app.controller("mainCtrl",function($scope){
-    $scope.title = "Hi OSama"
-    $scope.model = "hello world";
+    $scope.title = "Hi OSama";
 })
 
 </script>
