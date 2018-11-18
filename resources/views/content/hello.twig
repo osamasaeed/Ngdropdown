@@ -1,3 +1,23 @@
-<h1>Hello World!
-Hi Its OSama<br/>
-</h1>
+<html>
+<head>
+<title>Dropdown Menu</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
+</head>
+<body ng-app="Ngdropdown">
+<h1>plugin works</h1>
+<div ng-controller="mainCtrl">
+
+    <input type="text" ng-model="model" />
+    {{model}}
+
+</div>
+<script>
+var app = angular.module('Ngdropdown',[]);
+app.controller("mainCtrl",function($scope){
+    $scope.title = "Hi OSama"
+    $scope.model = "hello world";
+})
+
+</script>
+</body>
+</html>
