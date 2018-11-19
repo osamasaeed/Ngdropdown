@@ -1,22 +1,89 @@
-<html>
+<html ng-app="Ngdropdown">
 <head>
 <title>Dropdown Menu</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
 </head>
-<body ng-app="Ngdropdown">
+<body ng-controller="mainCtrl">
 <h1>plugin works</h1>
-<div ng-controller="mainCtrl">
+<h1>{{title}}</h1>
 
-    <input type="text" ng-model="name" />
-    <input type="text" ng-model="name" />
-
-   <p>{{name}}</p>
+<div >
+<label>First
+<select name="d1" ng-model="selectedItem1" ng-change="d1Changed(selectedItem1)" >
+    <option ng-repeat="a in arr1" value="a.vlaue">{{a.name}}</option>
+</select>
+</label>
+<br>
+<label>Second
+<select name="d2" ng-model="selectedItem2" ng-change="d2Changed(selectedItem2)" >
+    <option ng-repeat="b in arr2" value="b.vlaue">{{b.name}}</option>
+</select>
+</label>
+<br>
+<label>Third
+<select name="d3" ng-model="selectedItem3"  >
+    <option ng-repeat="c in arr3" value="c.vlaue">{{c.name}}</option>
+</select>
+</label>
 
 </div>
+
 <script>
 var app = angular.module('Ngdropdown',[]);
 app.controller("mainCtrl",function($scope){
     $scope.title = "Hi OSama";
+    $scope.selectedItem1="";
+    $scope.selectedItem2="";
+    $scope.selectedItem3="";
+    $scope.arr1 = [];
+    $scope.arr2 = [];
+    $scope.arr3 = [];
+
+    $scope.arr1 = [
+        {
+            name:"DD1 option1",
+            value:"dd1opt1"
+        },
+        {
+            name:"DD1 option2",
+            value:"dd1opt2"
+        },
+        {
+            name:"DD1 option2",
+            value:"dd1opt2"
+        },
+    ]
+    var row = [
+        {
+            name:"dynamic option 1",
+            value: "dopt1"
+        }
+        {
+            name:"dynamic option 2",
+            value: "dopt2"
+        },
+        {
+            name:"dynamic option 3",
+            value: "dopt3"
+        }
+        {
+            name:"dynamic option 4",
+            value: "dopt4"
+        }
+    ]
+
+    $scope.d1Changed(item){
+        console.log(item);
+        console.log($scope.selectedItem1);
+
+        $scope.arr2 = row;
+    }
+    $scope.d2Changed(item){
+        console.log(item);
+        console.log($scope.selectedItem2);
+        $scope.arr3 = row;
+    }
+
 })
 
 </script>
