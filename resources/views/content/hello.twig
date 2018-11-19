@@ -10,19 +10,19 @@
 <div >
 <label>First
 <select name="d1" ng-model="selectedItem1" ng-change="d1Changed(selectedItem1)" >
-    <option ng-repeat="a in arr1" ng-value="a.value">{{a.name}}</option>
+    <option ng-repeat="a in arr1" ng-value="a.value" ng-bind="a.name"></option>
 </select>
 </label>
 <br>
 <label>Second
 <select name="d2" ng-model="selectedItem2" ng-change="d2Changed(selectedItem2)" >
-    <option ng-repeat="b in arr2" ng-value="b.value">{{b.name}}</option>
+    <option ng-repeat="b in arr2" ng-value="b.value" ng-bind="b.name"></option>
 </select>
 </label>
 <br>
 <label>Third
 <select name="d3" ng-model="selectedItem3"  >
-    <option ng-repeat="c in arr3" ng-value="c.value">{{c.name}}</option>
+    <option ng-repeat="c in arr3" ng-value="c.value" ng-bind="c.name"></option>
 </select>
 </label>
 
